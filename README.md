@@ -10,11 +10,10 @@ pins used on RP2040 are:
 - GND
 - 29 : connected to servo signal wire
 - 1 : connected to AUX1 port Tx
--
-- ![schema](https://github.com/aeropic/RP2040-haptic-vario-TX16S/assets/38628543/dba0703f-84da-4587-babd-ca98d9ad82b8)
+
+![schema](https://github.com/aeropic/RP2040-haptic-vario-TX16S/assets/38628543/fffd0cc0-4c00-41d5-bf5b-a583fd1666bd)
 
 
-  ![image](https://github.com/aeropic/RP2040-haptic-vario-TX16S/assets/38628543/2541eaa6-9ad6-48c1-8a46-e737b43398fa)
 
 
 # software
