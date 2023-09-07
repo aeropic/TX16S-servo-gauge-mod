@@ -11,6 +11,9 @@ pins used on RP2040 are:
 - 29 : connected to servo signal wire
 - 1 : connected to AUX1 port Tx
 
+  ![image](https://github.com/aeropic/RP2040-haptic-vario-TX16S/assets/38628543/2541eaa6-9ad6-48c1-8a46-e737b43398fa)
+
+
 # software
 radio
 from system menu, keep the AUX1 port unpowered
