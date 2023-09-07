@@ -41,9 +41,9 @@ A directory will open in a window, just drag ad drop the .uf2 file which is the 
 
 - a DIY AUX1 connector
   
-  I did not want to solder anything to the radio, I therefore add to tinker a connector able to be connected from inside.
-I use a 3 pins female connector housing. just enlarge the holes drilling them at 1.5 mm and trim the length so that the rubber door still closes...
-For the male part, I use a 2mm pitch 3 pi,s connectors, the pins are really thin. Solder them at the tip of a servo wire.
+  I did not want to solder anything to the radio, I therefore had to tinker a connector able to be connected from inside.
+I use a 3 pins 2.54 mm pitch female connector housing. just enlarge the holes drilling them at 1.5 mm and trim the length so that the rubber door still closes...
+For the male part, I use a 2mm pitch, 3 pins connector, the pins are really thin they enter easily into the 2.54 mm female housing and they make spring due to the difference in pitch and a pretty good contact. Solder them at the tip of a servo wire.
 Insert the female connector housing to the end from the outside then slide the 3 pins male connector into the housing from inside... Et voilà !
 ![PXL_20230907_165027998](https://github.com/aeropic/RP2040-haptic-vario-TX16S/assets/38628543/014c804d-60c7-40f2-a62d-13d8e95fe0da)
 ![PXL_20230907_165032128](https://github.com/aeropic/RP2040-haptic-vario-TX16S/assets/38628543/3a7223a1-6384-4ad9-9f62-f4b26f7630dc)
