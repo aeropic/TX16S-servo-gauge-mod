@@ -61,6 +61,7 @@ Before connecting it to the AUX port I measured its current:
 - 5 mA when idle
 - 40 to 50 mA when rotating freely
 - up to 200 mA when applying torque on the horn (strong torque...)
+  
 As the internal regulator driving both AUX ports is able to deliver up to 500mA, this is really safe.
 
 To install it inside the radio I designed a 3D printed support :
