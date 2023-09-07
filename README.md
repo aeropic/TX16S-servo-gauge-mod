@@ -17,7 +17,7 @@ pins used on RP2040 are:
 
 
 # software
-  radio:
+radio:  
 from system menu, keep the AUX1 port unpowered
 in the radio a very simple LUA script is placed inside the SCRIPTS/FUNCTIONS directory
 - function "run" is activated by a switch from a SPECIAL FUNCTION in the radio. It does the following tasks:
@@ -28,7 +28,7 @@ in the radio a very simple LUA script is placed inside the SCRIPTS/FUNCTIONS dir
 - function "background" is executed by the system when the switch associated to the SF is set to OFF. It does only:
   - switch OFF the AUX1 port which in turn switches OFF the RP and the servo
 
-   RP2040:
+RP2040:  
 it is programmed in the arduino IDE but if you're not familiar it is enough to unplug the RP2040, press and hold the boot button, plug the USB to a PC.
 A directory will open in a window, just drag ad drop the .uf2 file which is the binary program.
 
