@@ -56,7 +56,7 @@ Insert the female connector housing to the end from the outside then slide the 3
 ![PXL_20230907_165146388](https://github.com/aeropic/RP2040-haptic-vario-TX16S/assets/38628543/6076db17-3d13-43a4-9bdd-c578b7c1287a)
 ![PXL_20230907_165245867](https://github.com/aeropic/RP2040-haptic-vario-TX16S/assets/38628543/f58997b4-8bc8-436a-bfc0-83e897bc4b68)
 
-The required servo shall be as small as possible. This one is perfect (and cheap)
+The required servo shall be as small as possible. And buy one with at least 180° of rotation angle.This one is perfect (and cheap), it is given for 260° of rotation angle with a PWM pulse between 500µsec and 2500 µsec. By software I limit its amplitude to ~180° with a pulse of 1500µsec +/-700µsec.
 
 ![servo](https://github.com/aeropic/RP2040-haptic-vario-TX16S/assets/38628543/aeb7727f-bd75-4891-9766-37899d9125ca)
 
