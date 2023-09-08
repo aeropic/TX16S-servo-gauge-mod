@@ -1,10 +1,10 @@
 # TX16S-servo-gauge-mod
 This project adds a servo inside the TX16S radio whose arm rotates according to any action you need on your TX16S. It could be for instance:
-- a voltage telemetry, and you get a rotating gauge accessible from fingers tips
+- a voltage telemetry, and you get a rotating gauge "read" from fingers tips
 - the vertical speed telemetry (vario): no noise for neighbour pilots, no difficulties to hear the vario bips when flying close to noisy engine planes...
   Moreover, feeling thermal bubbles at the tip of your fingers is a nice more immersive experience...
 - the altitude telemetry and you will feel how high is flying your glider
-- any stick, switch or pot action.
+- any stick, switch or pot action...
 
 
 ![PXL_20230907_170501985](https://github.com/aeropic/RP2040-haptic-vario-TX16S/assets/38628543/29f0f15f-9e8a-4ae7-aeb4-d5ef539303eb)
