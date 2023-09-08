@@ -98,7 +98,7 @@ As you can see on the first pictures it fits right into the button's hole of the
 
 # bottom line
 This is a nice little project if you want to play with LUA, telemetry and some electronics.
-You can use the same concept to do what you want with your servo such as rotating an antenna to keep it in sight of your bird (a GPS woulbe needed but the same logics will apply...)
+You can use the same concept to do what you want with your servo such as rotating an antenna to keep it in sight of your bird (a GPS would be needed but the same logics will apply...)
 
 Obviously connecting electronics to your beloved TX16S shall be done with care. Even if it works really well for me, I cannot be taken for responsible if you end frying your radio, do it at your own risks and enjoy!
 
