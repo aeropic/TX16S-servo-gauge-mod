@@ -28,7 +28,7 @@ pins used on RP2040 are:
 
 # software
 radio:  
-from SYSTEM/HARDWARE menu of TX16S, keep the AUX1 port unpowered
+from SYSTEM/HARDWARE menu of TX16S, select LUA on AUX1 and keep the AUX1 port unpowered. As you may have noticed, there is a red warning at the bottom telling you to connect only 3.3V logic to the ports... Don't worry, the RP2040 comes with a 3.3V regulator on the board and is fully compliant with the 3.3V logic level.
 ![PXL_20230908_093016686(1)](https://github.com/aeropic/TX16S-servo-gauge-mod/assets/38628543/ba9937db-d8c2-4bed-a90d-8ad8811968e4)
 
 in the radio a very simple LUA script is placed inside the SCRIPTS/FUNCTIONS directory (in the pictures the script is servVa.lua).
