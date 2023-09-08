@@ -6,6 +6,8 @@ This project adds, inside the TX16S MKII radio, a servo whose arm rotates accord
 - the altitude telemetry and you will feel how high is flying your glider
 - any stick, switch or pot action...
 
+ see it working: https://youtu.be/M6sp2K4ucxU 
+
 
 ![PXL_20230907_170501985](https://github.com/aeropic/RP2040-haptic-vario-TX16S/assets/38628543/29f0f15f-9e8a-4ae7-aeb4-d5ef539303eb)
 ![PXL_20230907_170528011](https://github.com/aeropic/RP2040-haptic-vario-TX16S/assets/38628543/1d0a6027-b88f-43a9-af0b-66a26adc17e5)
