@@ -48,8 +48,8 @@ in the radio a very simple LUA script is placed inside the SCRIPTS/FUNCTIONS dir
 You will find here several lua scripts, just use one at a time on the same model otherwise the background function of one script will switch OFF AUX while the other script tries to switch it ON !   
 (note that the length of the name of script files shall be 6 character max)
 - servVa.lua : is the haptic vario script, so cool to feel thermals from fingers tips
-- servAl.lua : moves the servo according to the altitude telemetry field
-- servVB.lua : moves the servo according to Vbat voltage (+/-100%)
+- servAl.lua : TO TEST :moves the servo according to the altitude telemetry field
+- servVB.lua : TODO : moves the servo according to Vbat voltage (+/-100%)
 - servTh.lua : is just an example to move the servo following the position of the throttle stick
 - servS2.lua : TODO : a more complex script combining all the above scripts using the S2 pot to select which value to "display" between vario, altitude, voltage and a special function switch to activate the script
 
