@@ -87,7 +87,7 @@ Before connecting it to the AUX port I measured its current:
 As the internal regulator driving both AUX ports is able to deliver up to 500mA, this is really safe.
 
 To install it inside the radio I designed a 3D printed support :
-link to Thingiverse
+link to Thingiverse : https://www.thingiverse.com/thing:6208248
 ![PXL_20230907_125157019](https://github.com/aeropic/RP2040-haptic-vario-TX16S/assets/38628543/88cb4370-2907-450b-8b0e-303eadfd17a6)
 ![PXL_20230907_125146717](https://github.com/aeropic/RP2040-haptic-vario-TX16S/assets/38628543/6b705958-d559-4d83-887c-49705dda442e)
 
