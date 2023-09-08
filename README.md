@@ -28,15 +28,21 @@ pins used on RP2040 are:
 
 # software
 radio:  
-from system menu, keep the AUX1 port unpowered
+from SYSTEM/HARDWARE menu of TX16S, keep the AUX1 port unpowered
+![PXL_20230908_093016686(1)](https://github.com/aeropic/TX16S-servo-gauge-mod/assets/38628543/ba9937db-d8c2-4bed-a90d-8ad8811968e4)
+
 in the radio a very simple LUA script is placed inside the SCRIPTS/FUNCTIONS directory
 - function "run" is activated by a switch from a SPECIAL FUNCTION in the radio. It does the following tasks:
   - activate the AUX1 port (switch ON 5V) which in turn switches ON the RP and the servo
-  - periodically (by the EDGETX system) get the Vertical Speed value from telemetry, format it and push it on the serial port
-  - The LUA script manages a "dead zone" around low vertical speed and multiplies the Vspeed expressed in cm/sec by a gain (typicaly 7x)
+  - periodically (by the EDGETX system) get the required parameter used to move the servo (eg Vertical Speed value from telemetry), format it and push it on the serial port
+  - The LUA script manages the function transfer youwant to apply to your servo command (eg for the vario ("servV.lua" a "dead zone" is programmed around low vertical speeds and the Vspd is multiplied by 100 to  express it in cm/sec the by a by a gain (typicaly 7x) to give some range to the servo arm.
     (100 cm/sec with the gain of 7x is equivalent to full motion of the servo arm)
 - function "background" is executed by the system when the switch associated to the SF is set to OFF. It does only:
   - switch OFF the AUX1 port which in turn switches OFF the RP and the servo
+ ![Screenshot_20230907-190620](https://github.com/aeropic/TX16S-servo-gauge-mod/assets/38628543/2dd088af-90aa-4ff7-8840-e96e9db6fe5b)
+![Screenshot_20230907-190610](https://github.com/aeropic/TX16S-servo-gauge-mod/assets/38628543/c14de76b-6979-4cf5-b2b2-d3060bef6e13)
+
+
 
 RP2040:  
 it is programmed in the arduino IDE but if you're not familiar it is enough to unplug the RP2040, press and hold the boot button, plug the USB to a PC.
