@@ -31,30 +31,33 @@ radio:
 from SYSTEM/HARDWARE menu of TX16S, keep the AUX1 port unpowered
 ![PXL_20230908_093016686(1)](https://github.com/aeropic/TX16S-servo-gauge-mod/assets/38628543/ba9937db-d8c2-4bed-a90d-8ad8811968e4)
 
-in the radio a very simple LUA script is placed inside the SCRIPTS/FUNCTIONS directory (in the pictures the script is uartV.lua).
+in the radio a very simple LUA script is placed inside the SCRIPTS/FUNCTIONS directory (in the pictures the script is servVa.lua).
+![PXL_20230908_112807040](https://github.com/aeropic/TX16S-servo-gauge-mod/assets/38628543/48ec5480-ca94-413e-9510-34015eda1bdb)
 
-![Screenshot_20230907-190610](https://github.com/aeropic/TX16S-servo-gauge-mod/assets/38628543/c14de76b-6979-4cf5-b2b2-d3060bef6e13)
- ![Screenshot_20230907-190620](https://github.com/aeropic/TX16S-servo-gauge-mod/assets/38628543/2dd088af-90aa-4ff7-8840-e96e9db6fe5b)
+![PXL_20230908_112822073](https://github.com/aeropic/TX16S-servo-gauge-mod/assets/38628543/8a0cb566-ae8a-4833-bb46-a83a3acf4b79)
 
-- function "run" is activated by a switch from a SPECIAL FUNCTION in the radio. It does the following tasks:
+
+- function "run" is activated by a switch (here SC-) from a SPECIAL FUNCTION in the radio (here SF7). It does the following tasks:
   - activate the AUX1 port (switch ON 5V) which in turn switches ON the RP and the servo
   - periodically (by the EDGETX system) get the required parameter used to move the servo (eg Vertical Speed value from telemetry), format it and push it on the serial port
-  - The LUA script manages the function transfer you want to apply to your servo command (eg for the vario ("servVa.lua" a "dead zone" is programmed around low vertical speeds and the Vspd is multiplied by 100 to  express it in cm/sec then by a gain (typicaly 7x) to give some range to the servo arm.
-    (100 cm/sec with the gain of 7x is equivalent to full motion of the servo arm)
+  - The LUA script manages the transfer function you want to apply to your servo command (eg for the vario ("servVa.lua" a "dead zone" is programmed around low vertical speeds and the Vspd is multiplied by 100 to  express it in cm/sec then by a gain (typicaly 5x) to give some range to the servo arm.
+    (100 cm/sec with the gain of 5x is equivalent to 50% motion of the servo arm)
 - function "background" is executed by the system when the switch associated to the SF is set to OFF. It does only:
   - switch OFF the AUX1 port which in turn switches OFF the RP and the servo
 
 You will find here several lua scripts, just use one at a time on the same model otherwise the background function of one script will switch OFF AUX while the other script tries to switch it ON !   
 (note that the length of the name of script files shall be 6 character max)
-- servVa.lua : is the haptic vario script
+- servVa.lua : is the haptic vario script, so cool to feel thermals from fingers tips
 - servAl.lua : moves the servo according to the altitude telemetry field
-- servBa.lua : moves the servo according to Vbat voltage (+/-100%)
-- servTh.lua : is just an example to move the servo following the position of the gaz stick
-
+- servVB.lua : moves the servo according to Vbat voltage (+/-100%)
+- servTh.lua : is just an example to move the servo following the position of the throttle stick
+- servS2.lua : TODO : a more complex script combining all the above scripts using the S2 pot to select which value to "display" between vario, altitude, voltage and a special function switch to activate the script
 
 RP2040:  
-it is programmed in the arduino IDE but if you're not familiar it is enough to unplug the RP2040, press and hold the boot button, plug the USB to a PC.
+it is programmed in the arduino IDE but if you're not familiar with this, it is simpler to upload the binary : unplug the RP2040, press and hold the boot button, plug the USB to a PC.
 A directory will open in a window, just drag ad drop the .uf2 file which is the binary program.
+
+The program itself is trivial, it just reads the order on the serialport and sends it to the servo. There is a watchdog which resets the RP if no exchange with TX16S occurs within 0.5 sec.
 
 # mechanical integration
 
