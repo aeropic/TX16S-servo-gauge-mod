@@ -12,9 +12,9 @@ local function init()
 	if (i>0) and (i< 30) then i = 0.0 end  -- positive dead zone
 	if (i<0) and (i>-80) then i = 0.0 end  -- negative dead zone
 
-	i = i*5 -- give some gain to the servo arm
-	if (i>0) then i = i + 200 end
-	if (i<0) then i = i -200 end -- spread the positive from the negative Vspeeds
+	i = i*3 -- give some gain to the servo arm
+	if (i>0) then i = i + 100 end
+	if (i<0) then i = i -100 end -- spread the positive from the negative Vspeeds
 	serialWrite(i ..'\n')
 end
 
