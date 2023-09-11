@@ -1,9 +1,9 @@
 # TX16S-servo-gauge-mod
 This project adds, inside the TX16S MKII radio, a servo whose arm rotates according to any action you perform on your TX16S. It could be for instance:
-- a voltage telemetry, and you get a rotating gauge "read" from fingers tips
 - the vertical speed telemetry (vario): no noise for neighbour pilots, no difficulties to hear the vario bips when flying close to noisy engine planes...
   Moreover, feeling thermal bubbles at the tip of your fingers is a nice more immersive experience...
 - the altitude telemetry and you will feel how high is flying your glider
+- a voltage telemetry, and you get a rotating gauge "read" from fingers tips
 - any stick, switch or pot action...
 
  see it working: https://youtu.be/M6sp2K4ucxU 
