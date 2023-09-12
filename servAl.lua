@@ -7,7 +7,7 @@ local function run()
 	-- switch on power on port 0 = aux1 --serialSetPower(port_nr, value)
 	serialSetPower(0, 1)  -- set power on AUX1
 
-	i = getValue('Alt') / 100.0   -- should be a float with altitude in centimeters , convert to meters
+	i = getValue('Alt')   -- should be a float with altitude in centimeters , convert to meters
 	if  (i < 0) then i = 0.0 end
 	if (i > 600) then i = 0.0 end	-- FSIA6B ibus and edgetx get a bug for negative values of telemetry
 	

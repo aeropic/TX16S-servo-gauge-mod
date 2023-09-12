@@ -52,8 +52,10 @@ local function run()
     if mys2 < -900 then mode = 0 end
 	if mys2 > 900 then mode = 2 end
 
-    if mode == 0 then
-		i = getValue('Alt') / 100.0   -- should be a float with altitude in centimeters , convert to meters
+    if mode == 0 then   -- altimeter
+		i = getValue('Alt')    -- should be a float with altitude in  meters
+
+		model.setGlobalVariable(0, 0, i) -- jusy for debug
 		if  (i < 0) then i = 0.0 end
 		if (i > 600) then i = 0.0 end	-- FSIA6B ibus and edgetx get a bug for negative values of telemetry
 		
@@ -62,9 +64,10 @@ local function run()
 		
 	end
 
-	if mode == 1 then
+	if mode == 1 then  -- vario
 			--i = getValue('thr')
 			i = (100*getValue('VSpd'))    -- should be a float with vertical speed in cm/sec
+			model.setGlobalVariable(0, 0, i) -- jusy for debug
 		if (i>0) and (i< 30) then i = 0.0 end  -- positive dead zone
 		if (i<0) and (i>-80) then i = 0.0 end  -- negative dead zone
 
@@ -74,10 +77,11 @@ local function run()
 		
 	end
 
-	if mode == 2 then
+	if mode == 2 then  -- voltage on A1
 	--	i = getValue('thr')
 
 		cellResult = getValue("A1")                          --## Appel du tableau retourné par le capteur A1
+		model.setGlobalVariable(0, 0, i) -- jusy for debug
        
   		cellsumpercent = percentcell(cellResult/batType)      --## Pourcentage du pack
   
